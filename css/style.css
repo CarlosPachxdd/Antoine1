@@ -1,0 +1,409 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+ 
+  box-sizing: border-box;
+  height: auto;
+  width: 100%;
+}
+
+.logo {
+  width: 10%;
+  height: 5%;
+  display: flex;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.nav__menu {
+  cursor: pointer;
+  display: none;
+}
+
+.nav_img {
+  display: block;
+  width: 30px;
+}
+
+.nav__close {
+  display: none;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.navbar li {
+  margin: 0 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.navbar {
+  z-index: 1000;
+}
+
+/*/PRIMERA SECCION INICIO CON PARALAX/*/
+
+.parallax {
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden; 
+}
+
+.parallax video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
+.parallax-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+/*/FRASE/*/
+.parallax-content {
+  position: relative;
+}
+
+.text-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.animated-text {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 900;
+  font-size: 3em;
+  opacity: 0; 
+  animation: fadeIn 2s ease-out forwards; 
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.titulo h1{
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  text-decoration: underline;
+
+}
+/*/SOBRE MI/*/
+
+
+
+.personal p{
+  text-align: justify;
+  margin: 0px 0;
+  padding: 0px;
+}
+
+.antu{
+ width: 100%;
+}
+
+#inicio2 {
+  position: relative;
+}
+
+.titulo {
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px; 
+}
+
+
+
+.texto-sobre-imagen {
+  position: absolute;
+  top: 10%; 
+  left: 2%; 
+  text-align: start; 
+  color: #fff; 
+  opacity: 0; 
+  max-width: 25%; 
+  width: 100%; 
+  box-sizing: border-box; 
+  opacity: 1;
+
+}
+
+
+
+
+
+
+
+
+.inicio2{
+  position: relative;
+ height: auto;
+}
+
+/* ! Seccion de Mision y Vision */
+.MisionVision{
+display: flex;
+width: 100%;
+
+}
+.ContenedorMision{
+  height: 100%;
+ 
+}
+.MisionIMG{
+  width: 50%;
+  float: right;
+}
+
+
+/* ! Seccion  Vision */
+
+.vision{
+  display: flex;
+  width: 100%;
+  }
+
+.ContenedorVision{
+  height: 100%;
+  margin-top: 10%;
+}
+.VisionIMG{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+
+/*/seccion servicios/*/
+
+
+#servicios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px auto;
+}
+
+.s{
+  text-align: center;
+}
+.servicio-item {
+  width: calc(33.3333% - 20px); 
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.servicio-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.servicio-item:hover {
+  transform: scale(1.1);
+}
+
+/*/ PORTAFOLIO */ 
+
+.grid-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
+  gap: 10px; /* Espacio entre las imágenes */
+  padding: 20px;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Estilo para la visualización en pantalla completa */
+.grid-item.active img {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+}
+
+/*/ paquetes*/
+
+#paquetes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.paquetes-item {
+  max-width: 600px; /* Tamaño máximo deseado */
+  margin: 10px; /* Espacio entre las imágenes */
+  overflow: hidden; /* Oculta el contenido que excede el tamaño del contenedor */
+  transition: transform 0.3s; /* Agrega una transición suave al efecto de zoom */
+}
+
+.paquetes-item img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  transition: transform 0.3s; /* Agrega una transición suave al efecto de zoom */
+}
+
+/* Efecto de zoom al pasar el mouse */
+.paquetes-item:hover {
+  transform: scale(1.0); /* Ajusta el valor según el nivel de zoom deseado */
+}
+
+.paquetes-item:hover img {
+  transform: scale(1.05); /* Ajusta el valor según el nivel de zoom deseado */
+}
+
+
+
+/*/ Responsive General/*/
+@media screen and (max-width: 992px) {
+
+  .logo {
+    width: 20%;
+}
+
+
+  .nav__menu {
+      display: block;
+  }
+
+  .navbar ul {
+    list-style: none;
+    padding: 0;
+    display: none;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center; 
+    position: absolute;
+    top: 60px; 
+    right: 0;
+    width: 100%;
+    background-color: #000;
+    padding: 10px;
+}
+
+.navbar li {
+    margin: 3px; 
+}
+
+  .navbar ul.open {
+      display: flex;
+  }
+
+  .nav__menu.active .nav_img {
+      display: none;
+  }
+
+  .nav__menu.active .nav__close {
+      display: block;
+  }
+
+  .texto-sobre-imagen {
+    font-size: 13px; 
+    max-width: 40%; 
+    width: 50%; 
+    
+}
+.sobre{
+  font-size: 10px;
+}
+
+
+.servicio-item {
+  width: calc(50% - 20px); 
+}
+
+.ContenedorMision {
+  margin: 0%;
+    text-align: left; 
+    font-size: 13px;
+    
+}
+
+.MisionIMG {
+  justify-content: center;
+  max-width: 100%; 
+  margin-top: 20%;
+  margin-bottom: 35%;
+}
+
+.ContenedorVision {
+  margin: 0%;
+    text-align: left; 
+    font-size: 13px;
+    
+}
+
+.VisionIMG {
+  justify-content: center;
+  max-width: 100%; 
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+
+
+
+
+}
+@media (max-width: 768px) {
+  .animated-text {
+      font-size: 1.5em;
+      max-height: 3.6em; 
+  }
+
+}

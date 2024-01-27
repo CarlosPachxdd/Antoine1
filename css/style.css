@@ -1,14 +1,9 @@
 body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  box-sizing: border-box;
-  height: auto;
-  width: 100%;
-}
+  font-family: 'Poppins', sans-serif; margin: 0; box-sizing: border-box; height: auto; width: 100%; }
 
-.logo {
-  width: 5%;
-}
+html{ scroll-behavior:smooth; }
+
+.logo { width: 5%; }
 
 .navbar {
   padding: 5px 50px;
@@ -19,15 +14,11 @@ body {
   align-items: center;
   position: sticky;
   top: 0;
-
 }
 
 .nav__menu {
-  cursor: pointer;
   display: none;
 }
-
-
 
 .nav__close {
   display: none;
@@ -133,7 +124,7 @@ body {
 }
 
 .antu{
- width: 100%;
+ width: 50%;
 }
 
 #inicio2 {
@@ -141,103 +132,68 @@ body {
 }
 
 .titulo {
+  background-color: #000;
   position: relative;
   text-align: center;
   margin-bottom: 30px; 
 }
 
-.texto-sobre-imagen {
-  position: absolute;
-  top: 10%; 
-  left: 2%; 
-  text-align: start; 
-  color: #fff; 
-  opacity: 0; 
-  max-width: 25%; 
-  width: 100%; 
-  box-sizing: border-box; 
-  opacity: 1;
+.texto-sobre-imagen { position: absolute; top: 20%; left: 5%; text-align: start; color: #fff; max-width: 25%; width: 100%; }
 
-}
+.texto-sobre-imagen .sobre{ font-size: 60px; }
 
-.inicio2{
-  position: relative;
- height: auto;
-}
+.inicio2{ position: relative; height: auto;}
 
-/* ! Seccion de Mision y Vision */
-.MisionVision{
-display: flex;
-width: 100%;
+/* ! Seccion de Mision */
+.MisionVision{ display: flex; width: 100%; }
 
-}
-.ContenedorMision{
-  height: 100%;
-  display: flex;
-  padding: 0px 10%;
-}
-.ContenedorMision h1{
-font-size: 60px;
-}
+.ContenedorMision{ height: 100%; display: flex; padding: 0px 10%; }
 
-.textosMision{
-  width: 50%;
-  padding: 0px 10%;
-}
-.MisionIMG{
-  width: 50%;
-  border-radius: 10px;
-}
+.ContenedorMision h1{ font-size: 60px; }
+
+.textosMision{ width: 50%; padding: 0px 10%; }
+
+.MisionIMG{ width: 50%; border-radius: 10px; }
 
 
 /* ! Seccion  Vision */
 
-.vision{
-  display: flex;
-  width: 100%;
-  }
+.vision{ display: flex; width: 100%; }
 
-.ContenedorVision{
-  height: 100%;
-  display: flex;
-  margin-top: 10%;
-  padding: 0px 10%;
-}
-.textosVision{
-  width: 50%;
-  padding: 0px 10%;
-}
-.textosVision h1{
-  font-size: 60px;
-  }
+.ContenedorVision{ height: 100%; display: flex; margin-top: 5%; padding: 0px 10%; }
+
+.textosVision{ width: 50%; padding: 0px 10%; }
+
+.textosVision h1{ font-size: 60px; }
   
-  .textosVisionn p{
-   width: 100%;
-  }
+.textosVisionn p{ width: 100%; }
 
-.VisionIMG{
-  width: 50%;
-  height: 100%;
-  float: left;
-  border-radius: 10px;
-}
-
+.VisionIMG{ width: 50%; height: 100%; float: left; border-radius: 10px; }
 
 /*/seccion servicios/*/
 
 
-#servicios {
+#servicios { padding-top: 75px; }
+
+#portafolio{ padding-top: 75px; }
+
+.fotorama{
+  scale: 0.9;
+}
+.fotorama img{
+  border-radius: 15px;
+}
+.contenedorIMG{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
   margin: 20px auto;
 }
-
 .servicios{
   text-align: center;
   font-size: 70px;
-  margin: 60px 0 0;
+  margin: 0;
 }
 .servicio-item {
   width: calc(33.3333% - 20px); 
@@ -261,10 +217,7 @@ font-size: 60px;
 
 /*/ PORTAFOLIO */ 
 
-.fotorama{
-  margin: 0;
-  scale: 0.75;
-}
+
 .grid-gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
@@ -295,6 +248,7 @@ font-size: 60px;
 /*/ paquetes*/
 
 #paquetes {
+  padding-top: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -305,7 +259,8 @@ font-size: 60px;
   max-width: 600px; /* Tamaño máximo deseado */
   margin: 10px; /* Espacio entre las imágenes */
   overflow: hidden; /* Oculta el contenido que excede el tamaño del contenedor */
-  transition: transform 0.3s; /* Agrega una transición suave al efecto de zoom */
+  transition: transform 0.3s; 
+  transition: 1s;/* Agrega una transición suave al efecto de zoom */
 }
 
 .paquetes-item img {
@@ -318,10 +273,12 @@ font-size: 60px;
 
 /* Efecto de zoom al pasar el mouse */
 .paquetes-item:hover {
-  transform: scale(1.0); /* Ajusta el valor según el nivel de zoom deseado */
+  transform: scale(1.0);
+  transition: 1s; /* Ajusta el valor según el nivel de zoom deseado */
 }
 
 .paquetes-item:hover img {
+  transition: 1s;
   transform: scale(1.05); /* Ajusta el valor según el nivel de zoom deseado */
 }
 
@@ -330,97 +287,91 @@ font-size: 60px;
 /*/ Responsive General/*/
 @media screen and (max-width: 992px) {
 
-  .logo {
-    width: 20%;
-}
+.logo { width: 15%; }
 
+.nav__menu { display: block; transition: 1s;}
 
-  .nav__menu {
-      display: block;
-  }
-
-  .navbar ul {
-    list-style: none;
-    padding: 0;
-    display: none;
-    flex-direction: row;
-    justify-content: center; 
-    align-items: center; 
-    position: absolute;
-    top: 60px; 
-    right: 0;
-    width: 100%;
-    background-color: #000;
-    padding: 10px;
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  display: none;
+  flex-direction: row;
+  justify-content: center; 
+  align-items: center; 
+  position: absolute;
+  top: 30px; 
+  transition: 1s;
+  right: 0;
+  width: 100%;
+  background-color: #000;
+  padding: 10px;
 }
 
 .navbar li {
     margin: 3px; 
+    transition: 1s;
 }
 
-  .navbar ul.open {
-      display: flex;
-  }
-
-  .nav__menu.active .nav_img {
-      display: none;
-  }
-
-  .nav__menu.active .nav__close {
-      display: block;
-  }
-
-  .texto-sobre-imagen {
-    font-size: 13px; 
-    max-width: 40%; 
-    width: 50%; 
-    
-}
-.sobre{
-  font-size: 10px;
+.navbar ul.open {
+    display: flex;
+    transition: 1s;
 }
 
-
-.servicio-item {
-  width: calc(50% - 20px); 
+.nav__menu.active .nav_img {
+    display: none;
+    position: sticky;
+    top: 0;
+    transition: 1s;
 }
 
-.ContenedorMision {
-  margin: 0%;
-    text-align: left; 
-    font-size: 13px;
-    
+.nav__menu.active .nav__close {
+    display: block;
+    position: sticky;
+    top: 0;
+    transition: 1s;
 }
 
-.MisionIMG {
-  justify-content: center;
-  max-width: 100%; 
-  margin-top: 20%;
-  margin-bottom: 35%;
-}
+.animated-text { font-size: 2.5em; max-height: 8em; }
 
-.ContenedorVision {
-  margin: 0%;
-    text-align: left; 
-    font-size: 13px;
-    
-}
+.antu{ width: 100%; height: 75vh; }
 
-.VisionIMG {
-  justify-content: center;
-  max-width: 100%; 
-  margin-top: 15%;
-  margin-bottom: 15%;
-}
+.texto-sobre-imagen { top: 5%; left: 5%; max-width: 50%; color: #989898; font-size: 14px;}
 
+.texto-sobre-imagen .sobre{ font-size: 40px; color: #fff;}
 
+/* ?Contenedor Mision */
+.ContenedorMision{ padding: 0px 2%; flex-direction: column; align-items: center; padding: 0 10%;}
 
+.textosMision{ width: 100%; font-size: 16px;}
 
-}
-@media (max-width: 768px) {
-  .animated-text {
-      font-size: 1.5em;
-      max-height: 3.6em; 
-  }
+.MisionIMG { width: 90%; margin-top: 5%; margin-bottom: 10%; }
 
+.ContenedorMision h1{ font-size: 25px; }
+/* ? Contenedor Mision */
+
+/* * Contenedor Vision */
+.ContenedorVision h1{ font-size: 25px; }
+
+.ContenedorVision{ padding: 0px 2%; flex-direction: column-reverse; align-items: center; padding: 0 10%;}
+
+.textosVision{ width: 100%; font-size: 16px;}
+
+.VisionIMG { width: 90%; margin-top: 5%; margin-bottom: 10%; }
+/* * Contenedor Vision */
+
+#servicios { padding-top: 10px; }
+
+#portafolio { padding-top: 10px; }
+
+#paquetes { padding-top: 10px; }
+
+.fotorama{ scale: 0.99; }
+
+.servicios{ font-size: 40px;}
+
+.servicio-item { width: calc(50% - 20px); }
+
+.paquetes-item { width: 90%; }
+
+.paquetes { flex-direction: column; justify-content: center;}
 }

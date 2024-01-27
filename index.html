@@ -32,7 +32,7 @@
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#servicios">Servicios</a></li>
             <li><a href="#portafolio">Portafolio</a></li>
-            <li><a href="#Paquetes">Paquetes</a></li>
+            <li><a href="#paquetes">Paquetes</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
         <img src="./imagenes/close.svg" class="nav__close">
@@ -57,7 +57,7 @@
         <div class="titulo">
             <img src="./imagenes/antuan.jpg" alt="Antoine Torres" class="antu">
         </div>
-        <div class="texto-sobre-imagen" data-aos="flip-down">
+        <div class="texto-sobre-imagen" data-aos="fade-left">
             <h1 class="sobre">SOBRE MI </h1>
             <p>Soy Antoine Torrres, un apasionado creador visual con una extensa experiencia en TV Azteca.</p>
              Mi lente ha capturado momentos destacados en diversos eventos,
@@ -69,11 +69,9 @@
         </div>
         </section>
     
-    <section class="MisionVision">
+    <section class="MisionVision" data-aos="zoom-in-up">
         
-        <div class="ContenedorMision" data-aos="fade"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-sine">
+        <div class="ContenedorMision" >
             
             <div class="textosMision">
             <h1>MISION</h1>
@@ -84,11 +82,10 @@
         <img src="./imagenes/mision.jpg" alt="mision" class="MisionIMG">
         </div>
     </section>
-    <section class="vision">
+
+    <section class="vision" data-aos="zoom-in">
         
-            <div class="ContenedorVision" data-aos="fade"
-            data-aos-offset="300"
-            data-aos-easing="ease-in-sine"> 
+            <div class="ContenedorVision" > 
             <img src="./imagenes/vision.jpg" alt="vision" class="VisionIMG">
             <div class="textosVision">
                 <h1>VISION</h1>
@@ -98,30 +95,32 @@
             </div>
         </div>
     </section>
-    <h1 class="servicios">Servicios</h1>
+    
 
 
     <section id="servicios" >
-        
-        <div class="servicio-item" data-tooltip-content="#tooltip1" data-aos="zoom-in">
-            <img src="./imagenes/1.jpg" alt="Servicio 1">
-        </div>
-        <div class="servicio-item" data-tooltip-content="#tooltip2" data-aos="zoom-in">
-            <img src="./imagenes/2.jpg" alt="Servicio 2">
-        </div>
-        <div class="servicio-item" data-tooltip-content="#tooltip3" data-aos="zoom-in">
-            <img src="./imagenes/3.jpg" alt="Servicio 3">
-        </div>
-        <div class="servicio-item" data-tooltip-content="#tooltip4" data-aos="zoom-in">
-            <img src="./imagenes/4.jpg" alt="Servicio 4">
-        </div>
-        <div class="servicio-item" data-tooltip-content="#tooltip5" data-aos="zoom-in">
-            <img src="./imagenes/5.jpg" alt="Servicio 5">
-        </div>
+        <h1 class="servicios">Servicios</h1>
+        <div class="contenedorIMG">
+
+            <div class="servicio-item" data-tooltip-content="#tooltip1" data-aos="zoom-in">
+                <img src="./imagenes/1.jpg" alt="Servicio 1">
+            </div>
+            <div class="servicio-item" data-tooltip-content="#tooltip2" data-aos="zoom-in">
+                <img src="./imagenes/2.jpg" alt="Servicio 2">
+            </div>
+            <div class="servicio-item" data-tooltip-content="#tooltip3" data-aos="zoom-in">
+                <img src="./imagenes/3.jpg" alt="Servicio 3">
+            </div>
+            <div class="servicio-item" data-tooltip-content="#tooltip4" data-aos="zoom-in">
+                <img src="./imagenes/4.jpg" alt="Servicio 4">
+            </div>
+            <div class="servicio-item" data-tooltip-content="#tooltip5" data-aos="zoom-in">
+                <img src="./imagenes/5.jpg" alt="Servicio 5">
+            </div>
         <div class="servicio-item" data-tooltip-content="#tooltip6" data-aos="zoom-in">
             <img src="./imagenes/6.jpg" alt="Servicio 6">
         </div>
-
+        
         <div style="display: none;">
             <div id="tooltip1" >
                 <p>XV AÑOS</p>
@@ -143,12 +142,13 @@
             </div>
             
         </div>
-      </section>
-
-      <h1 class="servicios">PORTAFOLIO</h1>
+    </div>
+    </section>
+    
+   
 
       <section id="portafolio">
-        
+        <h1 class="servicios">PORTAFOLIO</h1>
         <div class="fotorama" data-allowfullscreen="true">
     <img src="./imagenes/a1.jpg" alt="Sesión" class="imagen">
     <img src="./imagenes/a2.jpg" alt="Sesión">
@@ -176,8 +176,8 @@
     
 
     <section id="paquetes">
-        <h1 class="servicios">PAQUETES</h1>
         <section id="paquetes">
+            <h1 class="servicios">PAQUETES</h1>
             <div class="paquetes-item " data-aos="flip-left"  data-aos-offset="600"><img src="./imagenes/p1.jpg" alt="Paquete 1"></div>
             <div class="paquetes-item"  data-aos="flip-right"  data-aos-offset="600"><img src="./imagenes/p2.jpg" alt="Paquete 2"></div>
             <div class="paquetes-item"  data-aos="flip-left"  data-aos-offset="600"><img src="./imagenes/p3.jpg" alt="Paquete 3"></div>
@@ -193,7 +193,11 @@
       <script src="./js/script.js"></script>
       <script src="./js/descripcion.js"></script>
       <script src="./js/aos.js"></script>
-      
+      <script>
+        AOS.init({delay: 200,
+        duration: 1500,
+        once: false,});
+      </script>      
 
 </body>
 </html>
